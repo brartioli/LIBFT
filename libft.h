@@ -6,14 +6,14 @@
 /*   By: bfernan2 <bfernan2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 13:07:59 by bfernan2          #+#    #+#             */
-/*   Updated: 2025/07/18 14:46:37 by bfernan2         ###   ########.fr       */
+/*   Updated: 2025/07/21 10:25:09 by bfernan2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include    <stddef.h>
+#include	<stddef.h>
 
 int	ft_isalpha(int c);
 int	ft_isalnum(int c);

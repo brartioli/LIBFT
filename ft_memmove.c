@@ -6,11 +6,10 @@
 /*   By: bfernan2 <bfernan2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 12:44:38 by bfernan2          #+#    #+#             */
-/*   Updated: 2025/07/18 14:49:46 by bfernan2         ###   ########.fr       */
+/*   Updated: 2025/07/21 10:25:05 by bfernan2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	<string.h>
 #include	"libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)

@@ -6,11 +6,11 @@
 /*   By: bfernan2 <bfernan2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 11:56:12 by bfernan2          #+#    #+#             */
-/*   Updated: 2025/07/18 12:14:44 by bfernan2         ###   ########.fr       */
+/*   Updated: 2025/07/21 10:24:53 by bfernan2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	<libft.h>
+#include	"libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
