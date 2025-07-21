@@ -1,31 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfernan2 <bfernan2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/17 13:12:50 by bfernan2          #+#    #+#             */
-/*   Updated: 2025/07/21 12:45:11 by bfernan2         ###   ########.fr       */
+/*   Created: 2025/07/21 14:56:48 by bfernan2          #+#    #+#             */
+/*   Updated: 2025/07/21 16:16:48 by bfernan2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
-{	
-	if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
-	{
-		return (1);
-	}
-	else
-	{
+#include	"libft.h"
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+{
+	size_t		i;
+	size_t		j;
+
+	i = 0;
+	j = 0;
+	if (!dst || !src)
 		return (0);
-	}	
+	while (src[i])
+		i++;
+	if (size == 0)
+		return (i);
+	while (j < size - 1 && src)
+	{
+		dst[j] = src[j];
+		j++;
+	}
+	dst[j] = '\0';
+	return (i);
 }
 // #include	<stdio.h>
 // int main(void)
 // {
-// 	int i = 12;
-// 	int res = ft_isalpha(i);
-// 	printf("%d\n",res);
-// 	return(0);
+// 	const char src[] = "Hello world";
+// 	char dst[]= "";
+// 	size_t len = ft_strlcpy(dst, src, sizeof(dst));
+// 	printf("%ld\n", len);
 // }

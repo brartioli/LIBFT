@@ -6,32 +6,29 @@
 /*   By: bfernan2 <bfernan2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 12:44:38 by bfernan2          #+#    #+#             */
-/*   Updated: 2025/07/21 10:25:05 by bfernan2         ###   ########.fr       */
+/*   Updated: 2025/07/21 16:28:14 by bfernan2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
 	unsigned char	*s;
 	unsigned char	*d;
 
 	s = (unsigned char *)src;
-	d = (unsigned char *)dest;
-
-	if (src == dest)
-	{
-		return (dest);
-	}
-	if (src > dest)
+	d = (unsigned char *)dst;
+	if (src == dst)
+		return (dst);
+	if (src > dst)
 	{
 		while (n > 0)
 		{
 			*d++ = *s++;
 			n--;
 		}
-		return (dest);		
+		return (dst);
 	}
 	s += n - 1;
 	d += n - 1;
@@ -40,13 +37,13 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		*d-- = *s--;
 		n--;
 	}
-	return (dest);
+	return (dst);
 }
-#include	<stdio.h>
-int main(void)
-{
-	const char src[] = "Hello";
-	char dest[] = "World";
-	ft_memmove(dest, src,  sizeof(src));
-	printf("%s", dest, src, sizeof(src));
-}
+// #include	<stdio.h>
+// int main(void)
+// {
+// 	const char src[] = "Hello";
+// 	char dst[] = "World";
+// 	ft_memmove(dest, src,  sizeof(src));
+// 	printf("%s\n", dst);
+// }
