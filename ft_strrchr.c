@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfernan2 <bfernan2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/17 17:40:48 by bfernan2          #+#    #+#             */
-/*   Updated: 2025/07/22 15:55:59 by bfernan2         ###   ########.fr       */
+/*   Created: 2025/07/22 18:24:13 by bfernan2          #+#    #+#             */
+/*   Updated: 2025/07/22 18:32:25 by bfernan2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	if (c >= 32 && c < 127)
+	int	i;
+
+	i = 0;
+	while (s[i])
 	{
-		return (1);
-	}
-	else
-	{
-		return (0);
+		if ((unsigned char)s[i] == (unsigned char)c)
+			return ((char *)&s[i]);
+		i++;
 	}
 }
-// #include	<stdio.h>
-// int main(void)
-// {
-// 	int i = '*';
-// 	int res = ft_isprint(i);
-// 	printf("%d\n",res);
-// 	return(0);
-// }

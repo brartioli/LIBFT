@@ -6,7 +6,7 @@
 #    By: bfernan2 <bfernan2@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/17 13:01:12 by bfernan2          #+#    #+#              #
-#    Updated: 2025/07/21 17:43:14 by bfernan2         ###   ########.fr        #
+#    Updated: 2025/07/22 18:25:21 by bfernan2         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ ft_isalnum.c ft_isalpha.c ft_isascii.c\
 ft_isdigit.c ft_isprint.c \
 ft_strlen.c ft_tolower.c ft_toupper.c\
 ft_memmove.c ft_strlcpy.c ft_strchr.c \
+ft_strlcat.c ft_strrchr.c 
 
 CC = cc
 RM = rm -f

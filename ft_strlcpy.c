@@ -6,7 +6,7 @@
 /*   By: bfernan2 <bfernan2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 14:56:48 by bfernan2          #+#    #+#             */
-/*   Updated: 2025/07/21 16:16:48 by bfernan2         ###   ########.fr       */
+/*   Updated: 2025/07/22 16:52:51 by bfernan2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,11 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 	i = 0;
 	j = 0;
-	if (!dst || !src)
-		return (0);
 	while (src[i])
 		i++;
 	if (size == 0)
 		return (i);
-	while (j < size - 1 && src)
+	while (j < size - 1 && src[j])
 	{
 		dst[j] = src[j];
 		j++;

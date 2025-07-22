@@ -6,7 +6,7 @@
 /*   By: bfernan2 <bfernan2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 12:15:44 by bfernan2          #+#    #+#             */
-/*   Updated: 2025/07/21 16:26:03 by bfernan2         ###   ########.fr       */
+/*   Updated: 2025/07/22 16:09:26 by bfernan2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned char	*s;
 	size_t			i;
 
-	if (dst == NULL || src == NULL)
+	if (!src && !dst)
 		return (dst);
 	d = (unsigned char *)dst;
 	s = (unsigned char *)src;
