@@ -6,7 +6,7 @@
 /*   By: bfernan2 <bfernan2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 13:07:59 by bfernan2          #+#    #+#             */
-/*   Updated: 2025/07/23 15:12:27 by bfernan2         ###   ########.fr       */
+/*   Updated: 2025/07/23 18:25:08 by bfernan2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ int	ft_atoi(const char *nptr);
 
 char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *s, int c);
-char	ft_strdup(const char *s);
+char	*ft_strdup(const char *s);
+char	*strnstr(const char *big, const char *little, size_t len);
 
 void	ft_bzero(void *s, size_t n);
 void	*ft_memset(void *dst, int c, size_t n);
