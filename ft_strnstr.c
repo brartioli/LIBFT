@@ -23,9 +23,9 @@ char	*strnstr(const char *big, const char *little, size_t len)
 	{
 		return ((char *)big);
 	}
-	if ()
+	if (!little)
 	{
-
+		return (NULL);
 	}
 }
 #include <string.h>
