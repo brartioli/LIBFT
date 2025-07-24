@@ -1,5 +1,4 @@
 # LIBFT
-Banner
 
 🏁 Goals
 C programming can be very tedious when one dosen´t acess to highly useful standard fuctions. This project is about understanding the way these functions work, implementing and learning to use them.
