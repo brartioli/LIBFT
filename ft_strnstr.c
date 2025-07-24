@@ -15,26 +15,19 @@
 char	*strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
-	size_t	j;
-	const char	*l;
 	const char	*b;
 	
 	i = 0;
-	j = 0;
-	l = (unsigned char *)little;
 	b = (unsigned char *)big;
-	while (len > 0)
+	if (little[0] == '\0')
 	{
-		if (!little[0])
-			return ((char *)big);
-		if (little[i] != big[j])
-		{
-			return (NULL);
-			i++;
-			j++;
-		}
+		return ((char *)big);
 	}
+	if ()
+	{
+
 	}
+}
 #include <string.h>
 #include <stdio.h>
 int main(void)
