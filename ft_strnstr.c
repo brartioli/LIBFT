@@ -12,39 +12,41 @@
 
 #include	"libft.h"
 
-char	*strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
+	size_t	j;
 	const char	*b;
 	
-	i = 0;
-	b = (unsigned char *)big;
-	if (little[0] == '\0')
+	j = 0;
+	b = (char *)big;
+	while (little[j])
+		j++;
+	if (j == 0)
+		return (b);
+	while (*b && len > 0 && j <= len)
 	{
-		return ((char *)big);
+		i = 0;
+		while (little[i] == b[i] && little[i])
+		{
+			i++;
+		}
+		if (!little[i])
+		{ 
+			return (b);
+		}
+		len--;
+		b++;
 	}
-	if (!little)
-	{
-		return (NULL);
-	}
+	return ((char *)0);
+	
 }
 #include <string.h>
 #include <stdio.h>
-int main(void)
+int main()
 {
-	char str[25] = "Good Morning sunshine";
+	char str[] = "Good Morning sunshine";
 	char str1[] = "Morning";
-	char *ptrstr;
-
-	ptrstr = strnstr(str, str1);
-
-	if (ptrstr)
-	{
-		printf("\n%c\n", *ptrstr);
-
-	}else
-	{
-		printf("\nNull pointer");
-	}
+	printf("%s\n", ft_strnstr(str, str1, 13));
 	return (0);
 }
