@@ -6,7 +6,7 @@
 /*   By: bfernan2 <bfernan2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 14:17:49 by bfernan2          #+#    #+#             */
-/*   Updated: 2025/07/23 14:35:10 by bfernan2         ###   ########.fr       */
+/*   Updated: 2025/07/25 18:28:03 by bfernan2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 	p1 = (const unsigned char *)s1;
 	p2 = (const unsigned char *)s2;
-	while (n > 0)
+	while (n > 0 && (*p1 || *p2))
 	{
 		if (*p1 != *p2)
 		{

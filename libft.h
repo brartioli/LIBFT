@@ -6,7 +6,7 @@
 /*   By: bfernan2 <bfernan2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 13:07:59 by bfernan2          #+#    #+#             */
-/*   Updated: 2025/07/23 18:25:08 by bfernan2         ###   ########.fr       */
+/*   Updated: 2025/07/25 18:21:57 by bfernan2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stddef.h>
 # include <stdlib.h>
+# include <stdint.h>
 
 int	ft_isalpha(int c);
 int	ft_isalnum(int c);
@@ -32,6 +33,7 @@ char	*ft_strdup(const char *s);
 char	*strnstr(const char *big, const char *little, size_t len);
 
 void	ft_bzero(void *s, size_t n);
+void	*ft_calloc(size_t nmemb, size_t size);
 void	*ft_memset(void *dst, int c, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t n);
