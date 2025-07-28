@@ -6,7 +6,7 @@
 #    By: bfernan2 <bfernan2@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/17 13:01:12 by bfernan2          #+#    #+#              #
-#    Updated: 2025/07/25 17:07:23 by bfernan2         ###   ########.fr        #
+#    Updated: 2025/07/28 12:46:26 by bfernan2         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ ft_memmove.c ft_strlcpy.c ft_strchr.c \
 ft_strlcat.c ft_strrchr.c ft_memchr.c \
 ft_memcmp.c ft_strncmp.c ft_atoi.c \
 ft_strdup.c ft_strnstr.c ft_calloc.c \
-ft_substr.c ft_putchar_fd.c 
+ft_substr.c ft_putchar_fd.c ft_strdup.c
 
 
 CC = cc

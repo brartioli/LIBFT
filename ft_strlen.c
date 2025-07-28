@@ -6,13 +6,15 @@
 /*   By: bfernan2 <bfernan2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 17:49:25 by bfernan2          #+#    #+#             */
-/*   Updated: 2025/07/22 16:56:51 by bfernan2         ###   ########.fr       */
+/*   Updated: 2025/07/28 12:52:34 by bfernan2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *s)
+#include	"libft.h"
+
+size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])
