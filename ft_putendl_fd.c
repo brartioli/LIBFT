@@ -1,39 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfernan2 <bfernan2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/28 17:43:48 by bfernan2          #+#    #+#             */
-/*   Updated: 2025/07/29 14:24:28 by bfernan2         ###   ########.fr       */
+/*   Created: 2025/07/29 14:03:55 by bfernan2          #+#    #+#             */
+/*   Updated: 2025/07/29 14:38:19 by bfernan2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-	long	nl;
-
-	nl = n;
-	if (nl < 0)
-	{
-		ft_putchar_fd('-', fd);
-		nl = -nl;
-	}
-	if (nl >= 10)
-	{
-		ft_putnbr_fd(nl / 10, fd);
-		ft_putnbr_fd(nl % 10, fd);
-	}
-	else
-	{
-		ft_putchar_fd(nl + 48, fd);
-	}
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
-// #include <stdio.h>
-// int main()
+// int main(int argc, char *argv[])
 // {
-// 	ft_putnbr_fd(-57, 2);
+// 	if (argc < 2)
+// 		return(0);
+// 	ft_putendl_fd(argv[1], 1);
 // }

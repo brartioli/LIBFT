@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfernan2 <bfernan2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/28 17:43:48 by bfernan2          #+#    #+#             */
-/*   Updated: 2025/07/29 14:24:28 by bfernan2         ###   ########.fr       */
+/*   Created: 2025/07/29 19:17:27 by bfernan2          #+#    #+#             */
+/*   Updated: 2025/07/29 19:27:28 by bfernan2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	long	nl;
+	unsigned int	i;
 
-	nl = n;
-	if (nl < 0)
+	i = 0;
+	if (!s || !f)
+		return ;
+	while (s[i])
 	{
-		ft_putchar_fd('-', fd);
-		nl = -nl;
-	}
-	if (nl >= 10)
-	{
-		ft_putnbr_fd(nl / 10, fd);
-		ft_putnbr_fd(nl % 10, fd);
-	}
-	else
-	{
-		ft_putchar_fd(nl + 48, fd);
+		f(i, &s[i]);
+		i++;
 	}
 }
-// #include <stdio.h>
-// int main()
-// {
-// 	ft_putnbr_fd(-57, 2);
-// }

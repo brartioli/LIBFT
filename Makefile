@@ -6,7 +6,7 @@
 #    By: bfernan2 <bfernan2@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/17 13:01:12 by bfernan2          #+#    #+#              #
-#    Updated: 2025/07/28 17:43:31 by bfernan2         ###   ########.fr        #
+#    Updated: 2025/07/29 19:16:56 by bfernan2         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,8 @@ ft_strlcat.c ft_strrchr.c ft_memchr.c \
 ft_memcmp.c ft_strncmp.c ft_atoi.c \
 ft_strdup.c ft_strnstr.c ft_calloc.c \
 ft_substr.c ft_putchar_fd.c ft_strjoin.c \
-ft_putstr_fd.c ft_putnbr_fd.c 
+ft_putstr_fd.c ft_putnbr_fd.c ft_putendl_fd.c \
+ft_strtrim.c ft_strmapi.c ft_striteri.c \
 
 
 

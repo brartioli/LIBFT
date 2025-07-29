@@ -1,39 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfernan2 <bfernan2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/28 17:43:48 by bfernan2          #+#    #+#             */
-/*   Updated: 2025/07/29 14:24:28 by bfernan2         ###   ########.fr       */
+/*   Created: 2025/07/29 15:05:57 by bfernan2          #+#    #+#             */
+/*   Updated: 2025/07/29 16:58:19 by bfernan2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	long	nl;
+	size_t	i;
+	size_t	j;
 
-	nl = n;
-	if (nl < 0)
+	i = 0;
+	j = ft_strlen(s1);
+	if (!s1 || !set)
+		return (NULL);
+	while (s1[i])
 	{
-		ft_putchar_fd('-', fd);
-		nl = -nl;
+		if (ft_strchr(set, s1[i]))
+			i++;
+		else
+			break ;
 	}
-	if (nl >= 10)
+	while (s1[i])
 	{
-		ft_putnbr_fd(nl / 10, fd);
-		ft_putnbr_fd(nl % 10, fd);
+		if (ft_strchr(set, s1[j]))
+			j--;
+		else
+			break ;
 	}
-	else
-	{
-		ft_putchar_fd(nl + 48, fd);
-	}
+	return (ft_substr(s1, i, (j - i + 1)));
 }
 // #include <stdio.h>
 // int main()
 // {
-// 	ft_putnbr_fd(-57, 2);
+// 	char	*ptr;
+// 	ptr = ft_strtrim("* !Hi8! *", "* !");
+// 	printf("%s", ptr);
+// 	return (0);
 // }
