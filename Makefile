@@ -6,7 +6,7 @@
 #    By: bfernan2 <bfernan2@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/17 13:01:12 by bfernan2          #+#    #+#              #
-#    Updated: 2025/07/30 12:38:20 by bfernan2         ###   ########.fr        #
+#    Updated: 2025/07/31 11:31:58 by bfernan2         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ ft_strdup.c ft_strnstr.c ft_calloc.c \
 ft_substr.c ft_putchar_fd.c ft_strjoin.c \
 ft_putstr_fd.c ft_putnbr_fd.c ft_putendl_fd.c \
 ft_strtrim.c ft_strmapi.c ft_striteri.c \
-ft_split.c 
+ft_split.c ft_itoa.c 
 
 
 
