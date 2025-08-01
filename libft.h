@@ -6,7 +6,7 @@
 /*   By: bfernan2 <bfernan2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 13:07:59 by bfernan2          #+#    #+#             */
-/*   Updated: 2025/07/31 15:10:17 by bfernan2         ###   ########.fr       */
+/*   Updated: 2025/08/01 16:07:33 by bfernan2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,11 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+
+/*BONUS*/
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
 
 #endif

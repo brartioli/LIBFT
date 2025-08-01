@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfernan2 <bfernan2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/17 13:59:51 by bfernan2          #+#    #+#             */
-/*   Updated: 2025/08/01 13:11:59 by bfernan2         ###   ########.fr       */
+/*   Created: 2025/08/01 13:11:31 by bfernan2          #+#    #+#             */
+/*   Updated: 2025/08/01 14:22:17 by bfernan2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+#include	"libft.h"
+
+t_list	*ft_lstnew(void *content)
 {
-	if (c >= 0 && c <= 127)
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	t_list	*nlst;
+
+	nlst = malloc(sizeof(t_list));
+	if (!nlst)
+		return (NULL);
+	nlst->content = content;
+	nlst->next = NULL;
+	return (nlst);
 }
-// #include	<stdio.h>
-// int main(void)
-// {
-// 	int i = 128;
-// 	int res = ft_isascii(i);
-// 	printf("%d\n",res);
-// 	return(0);
-// }

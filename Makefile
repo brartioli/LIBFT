@@ -6,7 +6,7 @@
 #    By: bfernan2 <bfernan2@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/17 13:01:12 by bfernan2          #+#    #+#              #
-#    Updated: 2025/07/31 11:31:58 by bfernan2         ###   ########.fr        #
+#    Updated: 2025/08/01 16:07:47 by bfernan2         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,12 +25,16 @@ ft_putstr_fd.c ft_putnbr_fd.c ft_putendl_fd.c \
 ft_strtrim.c ft_strmapi.c ft_striteri.c \
 ft_split.c ft_itoa.c 
 
+BONUS_SRCS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c \
+ft_lstsize_bonus.c ft_lstlast_bonus.c
 
+BONUS_OBJS = ${BONUS_SRCS:.c=.o}
 
 CC = cc
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
 OBJS = $(SRCS:.c=.o)
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 
 $(NAME): $(OBJS)
@@ -39,10 +43,13 @@ $(NAME): $(OBJS)
 all: $(NAME)
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
 	$(RM) $(NAME)
+
+bonus: $(NAME) $(BONUS_OBJS)
+	ar r $(NAME) $(BONUS_OBJS)
 
 re: fclean all
 

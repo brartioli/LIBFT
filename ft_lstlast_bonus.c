@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfernan2 <bfernan2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/17 13:59:51 by bfernan2          #+#    #+#             */
-/*   Updated: 2025/08/01 13:11:59 by bfernan2         ###   ########.fr       */
+/*   Created: 2025/08/01 15:53:33 by bfernan2          #+#    #+#             */
+/*   Updated: 2025/08/01 16:10:50 by bfernan2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+#include	"libft.h"
+
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (c >= 0 && c <= 127)
+	t_list	*ptr;
+
+	ptr = lst;
+	if (!lst)
+		return (NULL);
+	while (ptr->next != NULL)
 	{
-		return (1);
+		ptr = ptr->next;
 	}
-	else
-	{
-		return (0);
-	}
+	return (ptr);
 }
-// #include	<stdio.h>
-// int main(void)
-// {
-// 	int i = 128;
-// 	int res = ft_isascii(i);
-// 	printf("%d\n",res);
-// 	return(0);
-// }
