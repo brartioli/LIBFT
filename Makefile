@@ -6,7 +6,7 @@
 #    By: bfernan2 <bfernan2@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/17 13:01:12 by bfernan2          #+#    #+#              #
-#    Updated: 2025/08/01 16:07:47 by bfernan2         ###   ########.fr        #
+#    Updated: 2025/08/02 14:47:29 by bfernan2         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,10 +23,13 @@ ft_strdup.c ft_strnstr.c ft_calloc.c \
 ft_substr.c ft_putchar_fd.c ft_strjoin.c \
 ft_putstr_fd.c ft_putnbr_fd.c ft_putendl_fd.c \
 ft_strtrim.c ft_strmapi.c ft_striteri.c \
-ft_split.c ft_itoa.c 
+ft_split.c ft_itoa.c \
+
 
 BONUS_SRCS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c \
-ft_lstsize_bonus.c ft_lstlast_bonus.c
+ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c \
+ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c \
+ft_lstmap_bonus.c 
 
 BONUS_OBJS = ${BONUS_SRCS:.c=.o}
 
